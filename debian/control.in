@@ -1,0 +1,118 @@
+Source: geos
+Section: science
+Priority: optional
+Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
+Uploaders: Francesco Paolo Lovergine <frankie@debian.org>
+Build-Depends: debhelper (>= 9), doxygen, swig, ruby, ruby-dev
+Standards-Version: 3.9.3
+Homepage: http://trac.osgeo.org/geos/
+Vcs-Browser: http://git.debian.org/?p=pkg-grass/geos.git
+Vcs-Git: git://git.debian.org/git/pkg-grass/geos
+
+Package: libgeos-dev
+Section: libdevel
+Architecture: any
+Depends: libgeos-c1 (= ${binary:Version}), ${misc:Depends}
+Suggests: libgdal-doc
+Description: Geometry engine for GIS - Development files
+ GEOS provides a spatial object model and fundamental geometric
+ functions. It implements the geometry model defined in the
+ OpenGIS Consortium Simple Features Specification for SQL. 
+ .
+ This package contains the headers and libraries needed to 
+ develop programs using GEOS.
+
+Package: libgeos++-dev
+Section: libdevel
+Architecture: any
+Depends: libgeos-@VERSION@ (= ${binary:Version}), libgeos-dev, ${misc:Depends}
+Suggests: libgdal-doc
+Breaks: libgeos-dev (<< 3.3.1-1~)
+Description: Geometry engine for GIS - C++ development files
+ GEOS provides a spatial object model and fundamental geometric
+ functions. It implements the geometry model defined in the
+ OpenGIS Consortium Simple Features Specification for SQL. 
+ .
+ This package contains the headers and libraries needed to 
+ develop programs using GEOS in C++. Note that third-parties
+ programs should use the stable C API instead of the 
+ unstable C++ one.
+
+Package: libgeos-c1
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Geometry engine for Geographic Information Systems - C Library
+ GEOS provides a spatial object model and fundamental geometric
+ functions. It implements the geometry model defined in the
+ OpenGIS Consortium Simple Features Specification for SQL.
+ Functions provided include:
+ .
+   * spatial predicates (based on the DE-9IM model),
+   * overlay functions (intersection, difference, union,
+     symmetric difference),
+   * buffer,
+   * convex hull,
+   * area and distance functions, and
+   * topological validity checking
+ .
+ This package contains the C library. A C++ library is provided
+ by the libgeos-* package.
+
+Package: libgeos-@VERSION@
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Geometry engine for Geographic Information Systems - C++ Library
+ GEOS provides a spatial object model and fundamental geometric 
+ functions. It implements the geometry model defined in the 
+ OpenGIS Consortium Simple Features Specification for SQL. 
+ Functions provided include:
+ .
+   * spatial predicates (based on the DE-9IM model),
+   * overlay functions (intersection, difference, union, 
+     symmetric difference),
+   * buffer,
+   * convex hull,
+   * area and distance functions, and
+   * topological validity checking
+ .
+ This package contains the C++ library. A stable C library is provided
+ by the libgeos-c* package and should be preferred by third-parties
+ programs.
+
+Package: libgeos-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: libgeos-dev (= ${binary:Version})
+Homepage: http://download.osgeo.org/geos/doxygen/
+Description: Documentation for the GEOS GIS geometry engine library
+ GEOS provides a spatial object model and fundamental geometric
+ functions. It implements the geometry model defined in the
+ OpenGIS Consortium Simple Features Specification for SQL.
+ .
+ This package contains the documentation for the GEOS API.
+
+Package: libgeos-ruby1.8
+Section: ruby
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: GEOS bindings for Ruby
+ GEOS provides a spatial object model and fundamental geometric
+ functions. It implements the geometry model defined in the
+ OpenGIS Consortium Simple Features Specification for SQL.
+ .
+ This package contains the Ruby bindings for GEOS.
+
+Package: libgeos-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: libgeos-@VERSION@ (= ${binary:Version}), libgeos-c1 (= ${binary:Version}), ${misc:Depends}
+Description: Debugging symbols for the GEOS library
+ GEOS provides a spatial object model and fundamental geometric
+ functions. It implements the geometry model defined in the
+ OpenGIS Consortium Simple Features Specification for SQL.
+ .
+ This package contains the debugging symbols for C/C++ GEOS library.

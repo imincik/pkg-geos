@@ -1,0 +1,13 @@
+Index: geos/tools/geos-config.in
+===================================================================
+--- geos.orig/tools/geos-config.in	2012-05-23 15:30:18.000000000 +0200
++++ geos/tools/geos-config.in	2012-05-23 15:37:54.000000000 +0200
+@@ -38,7 +38,7 @@
+     echo -I${prefix}/include 
+       ;;
+     --libs)
+-      echo -L${libdir} -lgeos
++      echo -L${libdir} -lgeos-@VERSION@
+       ;;
+     --clibs)
+       echo -L${libdir} -lgeos_c

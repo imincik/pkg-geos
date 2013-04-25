@@ -1,0 +1,10 @@
+CoordinateSequenceFactory.h
+Node.cpp
+Root.cpp
+SimpleNestedRingTester.h
+DirectedEdgeStar.h
+DouglasPeuckerLineSimplifier.h
+TaggedLineString.cpp
+TaggedLineString.h
+TaggedLineStringSimplifier.h
+geos-config
