@@ -1,5 +1,5 @@
 /**********************************************************************
- * $Id: LineIntersector.h 3406 2011-07-05 09:44:10Z strk $
+ * $Id: LineIntersector.h 3788 2013-03-08 18:01:29Z strk $
  *
  * GEOS - Geometry Engine Open Source
  * http://geos.refractions.net
@@ -14,7 +14,7 @@
  *
  **********************************************************************
  *
- * Last port: algorithm/RobustLineIntersector.java rev. 1.38 (JTS-1.10)
+ * Last port: algorithm/RobustLineIntersector.java r785 (JTS-1.13+)
  *
  **********************************************************************/
 

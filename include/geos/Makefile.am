@@ -1,4 +1,4 @@
-# $Id: Makefile.am 3369 2011-05-17 20:44:35Z strk $
+# $Id: Makefile.am 3898 2013-08-19 15:45:47Z robe $
 #
 # This file is part of project GEOS (http://trac.osgeo.org/geos/) 
 #
@@ -16,7 +16,7 @@ SUBDIRS = \
     simplify \
     util
 
-EXTRA_DIST = version.h version.h.vc platform.h.vc platform.h.cmake
+EXTRA_DIST = version.h.vc platform.h.vc platform.h.cmake
 
 geosdir = $(includedir)/geos
 
@@ -46,11 +46,14 @@ geos_HEADERS = \
     opRelate.h \
     opValid.h \
     planargraph.h \
-    platform.h \
     precision.h \
     profiler.h \
     spatialIndex.h \
     timeval.h \
     unload.h \
-    util.h \
-    version.h
+    util.h
+
+nodist_geos_HEADERS = \
+ version.h \
+ platform.h
+ 

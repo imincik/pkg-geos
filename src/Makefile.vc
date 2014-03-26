@@ -1,4 +1,4 @@
-# $Id: Makefile.vc 3372 2011-05-19 19:32:06Z warmerdam $
+# $Id: Makefile.vc 3859 2013-08-02 22:33:36Z robe $
 #
 # Building on Win32 with Visual C++ 7.0, 7.1, 8.0 or 9.0
 ###############################################################################
@@ -353,14 +353,12 @@ clean:
 	@IF EXIST $(SLIBNAME) $(RM) $(SLIBNAME)
 	@IF EXIST $(CLIBNAME) $(RM) $(CLIBNAME)
 	@IF EXIST $(CDLLNAME) $(RM) $(CDLLNAME)
-	-@del ..\capi\*.obj
-	-@del *.exe
-	-@del *.exp
-	-@del *.ilk
-	-@del *.manifest
-	-@del *.obj
-	-@del *.pdb
-	-@FOR %d IN ( $(GEOS_DIRLIST) ) DO del %d\*.obj
+	-@del /s *.exe
+	-@del /s *.exp
+	-@del /s *.ilk
+	-@del /s *.manifest
+	-@del /s *.obj
+	-@del /s *.pdb
 
 TestSweepLineSpeed.exe:	$(LIBNAME) \
 		..\tests\bigtest\GeometryTestFactory.obj \

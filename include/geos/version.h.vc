@@ -1,5 +1,5 @@
 /**********************************************************************
- * $Id: version.h.vc 3757 2013-01-25 17:29:36Z strk $
+ * $Id: version.h.vc 3936 2013-09-04 21:04:59Z strk $
  *
  * GEOS - Geometry Engine Open Source
  * http://geos.refractions.net
@@ -35,11 +35,11 @@
 #endif
 
 #ifndef GEOS_VERSION_PATCH
-#define GEOS_VERSION_PATCH 8
+#define GEOS_VERSION_PATCH 9
 #endif
 
 #ifndef GEOS_VERSION
-#define GEOS_VERSION "3.3.8"
+#define GEOS_VERSION "3.3.9"
 #endif
 
 #ifndef GEOS_JTS_PORT

@@ -1,5 +1,5 @@
 /**********************************************************************
- * $Id: HotPixel.cpp 3527 2011-12-06 17:26:09Z strk $
+ * $Id: HotPixel.cpp 3825 2013-06-26 16:22:55Z strk $
  *
  * GEOS - Geometry Engine Open Source
  * http://geos.refractions.net
@@ -83,7 +83,7 @@ HotPixel::initCorners(const Coordinate& pt)
 	corner[0] = Coordinate(maxx, maxy);
 	corner[1] = Coordinate(minx, maxy);
 	corner[2] = Coordinate(minx, miny);
-	corner[3] = Coordinate(maxx, maxy);
+	corner[3] = Coordinate(maxx, miny);
 }
 
 bool

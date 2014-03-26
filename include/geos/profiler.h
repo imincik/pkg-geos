@@ -1,5 +1,5 @@
 /**********************************************************************
- * $Id: profiler.h 3255 2011-03-01 17:56:10Z mloskot $
+ * $Id: profiler.h 3815 2013-06-11 12:36:24Z strk $
  *
  * GEOS - Geometry Engine Open Source
  * http://geos.refractions.net
@@ -16,10 +16,12 @@
 #ifndef GEOS_PROFILER_H
 #define GEOS_PROFILER_H
 
+#include <stdlib.h> /** need this to correctly detect MINGW64 **/
 #include <geos/export.h>
 
 /* For MingW builds with __STRICT_ANSI__ (-ansi) */
-#if defined(__MINGW32__)
+/** MINGW64 doesn't have a config.h **/
+#if defined(__MINGW32__) && !defined(__MINGW64_VERSION_MAJOR)
 /* Allow us to check for presence of gettimeofday in MingW */ 
 #include <config.h>
 
@@ -32,7 +34,7 @@ extern "C" {
 }
 #endif
  
-#if defined(_MSC_VER) || defined(__MINGW32__) && !defined(HAVE_GETTIMEOFDAY)
+#if defined(_MSC_VER) || defined(__MINGW32__) && !defined(HAVE_GETTIMEOFDAY) && !defined(__MINGW64_VERSION_MAJOR)
 #include <geos/timeval.h>
 #else
 #include <sys/time.h>
