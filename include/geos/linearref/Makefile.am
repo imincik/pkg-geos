@@ -1,10 +1,10 @@
-# $Id: Makefile.am 2839 2010-01-13 00:43:42Z mloskot $
+# $Id: Makefile.am 3828 2013-07-05 14:43:53Z strk $
 #
 # This file is part of project GEOS (http://trac.osgeo.org/geos/) 
 #
 EXTRA_DIST = 
 
-geosdir = $(includedir)/geos/algorithm
+geosdir = $(includedir)/geos/linearref
 
 geos_HEADERS = \
     ExtractLineByLocation.h \

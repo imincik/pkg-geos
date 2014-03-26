@@ -1,5 +1,5 @@
 /**********************************************************************
- * $Id: LineSegmentIndex.cpp 1820 2006-09-06 16:54:23Z mloskot $
+ * $Id: LineSegmentIndex.cpp 3843 2013-07-17 12:57:40Z strk $
  *
  * GEOS - Geometry Engine Open Source
  * http://geos.refractions.net
@@ -84,6 +84,7 @@ public:
 		if ( this == &o ) return *this;
 		querySeg = o.querySeg;
 		items.reset(new vector<LineSegment*>(*(o.items.get())));
+		return *this;
 	}
 
 	void visitItem(void* item)
