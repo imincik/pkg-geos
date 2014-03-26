@@ -1,3 +1,9 @@
+geos (3.3.9-1~precise1) precise; urgency=low
+
+  * New Upstream release 3.3.9
+
+ -- Ivan Mincik <ivan.mincik@gmail.com>  Wed, 26 Mar 2014 13:18:56 +0100
+
 geos (3.3.8-2~precise1) precise; urgency=high
 
   * Launchpad build for Precise
